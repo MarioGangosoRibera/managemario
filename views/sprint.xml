@@ -1,0 +1,52 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="vista_managemario_sprint_tree">
+      <field name="name">vista_managecamario_sprint_tree</field>
+      <field name="model">managemario.task</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+  <!-- Plantilla formulario tipo form      -->
+    <record model="ir.ui.view" id="vista_managemario_sprint_form">
+      <field name="name">vista_managemario_sprint_form</field>
+      <field name="model">managemario.sprint</field>
+      <field name="arch" type="xml">
+        <form string="formulario_sprint" >
+          <group>
+              <field name="project"/>
+              <field name="name"/>
+              <field name="description"/>
+              <field name="start_date"/>
+              <field name="end_date"/>
+              <field name="tasks"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- Plantilla action -->
+    <record model="ir.actions.act_window" id="accion_managemario_sprint_form">
+      <field name="name">Sprint</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">managemario.sprint</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Sprint
+        </p>
+        <p> Click <strong> 'Crear' </strong> para añadir nuevos elementos
+         </p>
+      </field>
+    </record>
+
+    <menuitem name="Sprints" id="menu_managemario_sprint" parent="menu_managemario_management"
+              action="accion_managemario_sprint_form"/>
+  </data>
+</odoo>

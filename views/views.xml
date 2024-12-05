@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="managemario.list">
+      <field name="name">managemario list</field>
+      <field name="model">managemario.managemario</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="managemario.action_window">
+      <field name="name">managemario window</field>
+      <field name="res_model">managemario.managemario</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="managemario.action_server">
+      <field name="name">managemario server</field>
+      <field name="model_id" ref="model_managemario_managemario"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="managemario" id="managemario.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="managemario.menu_1" parent="managemario.menu_root"/>
+    <menuitem name="Menu 2" id="managemario.menu_2" parent="managemario.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="managemario.menu_1_list" parent="managemario.menu_1"
+              action="managemario.action_window"/>
+    <menuitem name="Server to list" id="managemario" parent="managemario.menu_2"
+              action="managemario.action_server"/>
+-->
+  </data>
+</odoo>
