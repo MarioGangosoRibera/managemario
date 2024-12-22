@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="accion_managemario_developer_window">
+          <field name="name">manage developer window</field>
+          <field name="res_model">res.partner</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Devs" id="menu_managemario_developer" parent="menu_managemario_management"
+                  action="accion_managemario_developer_window"/>
+    </data>
+</odoo>
