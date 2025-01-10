@@ -24,6 +24,7 @@
               <field name="code"/>
               <field name="name"/>
               <field name="description"/>
+              <field name="definition_date"/>
               <field name="start_date"/>
               <field name="end_date"/>
               <field name="is_paused"/>

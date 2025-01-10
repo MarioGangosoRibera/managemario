@@ -4,4 +4,3 @@ access_managemario_sprint,managemario.sprint,model_managemario_sprint,base.group
 access_managemario_project,managemario.project,model_managemario_project,base.group_user,1,1,1,1
 access_managemario_history,managemario.history,model_managemario_history,base.group_user,1,1,1,1
 access_managemario_technology,managemario.technology,model_managemario_technology,base.group_user,1,1,1,1
-access_managemario_developer,managemario.developer,model_managemario_developer,base.group_user,1,1,1,1
