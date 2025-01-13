@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <!-- Vista de árbol para comentarios -->
+        <record model="ir.ui.view" id="view_managemario_comment_tree">
+            <field name="name">managemario.comment.tree</field>
+            <field name="model">managemario.comment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="content"/>
+                    <field name="created_at"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de formulario para comentarios -->
+        <record model="ir.ui.view" id="view_managemario_comment_form">
+            <field name="name">managemario.comment.form</field>
+            <field name="model">managemario.comment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="content"/>
+                        <field name="task_id"/>
+                        <field name="project_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción para abrir la vista de comentarios -->
+        <record model="ir.actions.act_window" id="action_managemario_comment">
+            <field name="name">Comentarios</field>
+            <field name="res_model">managemario.comment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menú para acceder a los comentarios -->
+        <menuitem name="Comentarios" id="menu_managemario_comment" parent="menu_managemario_management"
+                  action="action_managemario_comment"/>
+    </data>
+</odoo>

@@ -31,6 +31,7 @@
         'views/history.xml',
         'views/technology.xml',
         'views/developer.xml',
+        'views/comment.xml',
         'views/views.xml',
         'views/templates.xml',
     ],
